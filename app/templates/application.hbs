@@ -1,3 +1,19 @@
-<h2 id="title">Welcome to Ember</h2>
+<h1 id="title">{{fa-icon "terminal"}} sideload.it</h1>
+<hr/>
+<nav>
+	{{#link-to "index"}}Home{{/link-to}}
+	{{#if session.isAuthenticated}}
+		<span> | Hi {{session.currentUser.displayName}} {{session.currentUser.id}}!
+			<button {{action "signOut"}}>{{fa-icon "sign-out"}} Sign out</button>
+		</span>
+	{{else}}
+		<span> | Sign in with
+			<button {{action "signIn" "github"}}>{{fa-icon "github-square"}} github</button>
+			<button {{action "signIn" "twitter"}}>{{fa-icon "twitter-square"}} twitter</button>
+		</span>
+	{{/if}}
+
+</nav>
+<hr/>
 
 {{outlet}}
