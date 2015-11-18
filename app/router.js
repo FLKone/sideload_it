@@ -10,11 +10,13 @@ Router.map(function() {
     this.route('user', { path: '/user/:user_id' });
 
     //apps
-    this.route('apps', function() {
-      this.route('submit');
-      this.route('all');
-      this.route('pending');
-    });
+    this.route('apps'); //auto rediret to apps.all
+    this.route('apps.submit', { path: '/apps/submit' });
+    this.route('apps.new', { path: '/apps/new' });
+
+    this.route('apps.all', { path: '/apps/#all' });
+    this.route('apps.pending', { path: '/apps/#pending' });
+
     this.route('app', { path: '/app/:app_id' });
 
     //error

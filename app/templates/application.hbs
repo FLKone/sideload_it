@@ -2,6 +2,7 @@
 <hr/>
 <nav>
 	{{#link-to "index"}}Home{{/link-to}}
+	{{#link-to "apps"}}Apps{{/link-to}}	({{#link-to "apps.submit"}}~submit{{/link-to}}{{#if session.currentUser.level}} {{#link-to "apps.new"}}+new{{/link-to}}{{/if}})
 	{{#if session.isAuthenticated}}
 		<span> | Hi {{#link-to "user" session.currentUser}} {{session.currentUser.displayName}}{{/link-to}}!
 			<button {{action "signOut"}}>{{fa-icon "sign-out"}} Sign out</button>
