@@ -3,7 +3,7 @@
 <nav>
 	{{#link-to "index"}}Home{{/link-to}}
 	{{#if session.isAuthenticated}}
-		<span> | Hi {{session.currentUser.displayName}} {{session.currentUser.id}}!
+		<span> | Hi {{#link-to "user" session.currentUser}} {{session.currentUser.displayName}}{{/link-to}}!
 			<button {{action "signOut"}}>{{fa-icon "sign-out"}} Sign out</button>
 		</span>
 	{{else}}

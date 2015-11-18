@@ -1,0 +1,16 @@
+<h3>{{model.displayName}} (@{{model.handle}}) profile</h3>
+
+<img src="{{model.avatar}}">
+<ul class="user">
+	<li>
+		<label>Handle</label> {{model.handle}}
+	</li>
+	<li>
+		<label>Username</label> {{model.displayName}}
+	</li>
+	{{#if model.level}}
+	<li>
+		<label>Level</label> {{model.level}}
+	</li>
+	{{/if}}
+</ul>
