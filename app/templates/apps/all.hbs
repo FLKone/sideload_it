@@ -1,3 +1,9 @@
 <h3>Applications</h3>
 
-{{outlet}}
+<ul class="list">
+{{#each model as |item|}}
+    <li>
+		{{item.name}} > {{item.description}}
+    </li>
+{{/each}}
+</ul>

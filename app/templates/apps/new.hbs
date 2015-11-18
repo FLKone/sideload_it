@@ -1,1 +1,22 @@
-{{outlet}}
+<h2>New App</h2>
+<ul class="app-add">
+  <li>
+    {{input value=app.name placeholder="Name"}}
+  </li>
+  <li>
+    {{input value=app.description placeholder="Description"}}
+  </li>
+  <li>
+    {{input value=app.repoURL placeholder="Repository URL"}}
+  </li>
+  <li>
+	{{input value=app.websiteURL placeholder="Website URL (optional)"}}
+  </li>
+  <li>
+    {{input value=app.appstoreURL placeholder="AppStore URL (optional)"}}
+  </li>
+
+  <li>
+    <button {{action "addApp"}}>Publish</button>
+  </li>
+</ul>
