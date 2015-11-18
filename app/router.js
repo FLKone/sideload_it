@@ -6,8 +6,19 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('user', { path: '/user/:user_id' });
-  this.route('bad_url', { path: '/*badurl' });
+    //user profile
+    this.route('user', { path: '/user/:user_id' });
+
+    //apps
+    this.route('apps', function() {
+      this.route('submit');
+      this.route('all');
+      this.route('pending');
+    });
+    this.route('app', { path: '/app/:app_id' });
+
+    //error
+    this.route('bad_url', { path: '/*badurl' });
 });
 
 export default Router;
