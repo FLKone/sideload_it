@@ -1,20 +1,43 @@
-<h1 id="title">{{fa-icon "terminal"}} sideload.it</h1>
-<hr/>
+<header>
+	<div class="wrapper">
+		{{#link-to "index" id="title"}}{{fa-icon "terminal"}} side<span>load</span>.it{{/link-to}}
+	</div>
+</header>
+
 <nav>
-	{{#link-to "index"}}Home{{/link-to}}
-	{{#link-to "apps"}}Apps{{/link-to}}	({{#link-to "apps.submit"}}~submit{{/link-to}}{{#if session.currentUser.level}} {{#link-to "apps.new"}}+new{{/link-to}}{{/if}})
-	{{#if session.isAuthenticated}}
-		<span> | Hi {{#link-to "user" session.currentUser}} {{session.currentUser.displayName}}{{/link-to}}!
-			<button {{action "signOut"}}>{{fa-icon "sign-out"}} Sign out</button>
-		</span>
-	{{else}}
-		<span> | Sign in with
-			<button {{action "signIn" "github"}}>{{fa-icon "github-square"}} github</button>
-			<button {{action "signIn" "twitter"}}>{{fa-icon "twitter-square"}} twitter</button>
-		</span>
-	{{/if}}
+	<div class="wrapper">
+		<ul class="top-navigation right">
+			<li>{{#link-to "index"}}Home{{/link-to}}</li>
+			<li>{{#link-to "apps"}}Apps{{/link-to}}</li>
+			<li>{{#link-to "apps"}}Categories{{/link-to}}</li>
+		</ul>
 
+
+
+		{{#if session.isAuthenticated}}
+		<ul class="top-navigation left">
+			<li><span>Hi</span> {{#link-to "user" session.currentUser}} {{session.currentUser.displayName}}{{/link-to}}<span> !</span></li>
+			<li><button {{action "signOut"}}>{{fa-icon "sign-out"}} Sign out</button></li>
+		</ul>
+		{{else}}
+			<ul class="top-navigation left">
+				<li>Sign in with</li>
+				<li><button {{action "signIn" "github"}}>{{fa-icon "github-square"}} github</button></li>
+				<li><button {{action "signIn" "twitter"}}>{{fa-icon "twitter-square"}} twitter</button></li>
+			</ul>
+		{{/if}}
+
+	</div>
 </nav>
-<hr/>
 
-{{outlet}}
+<article class="">
+	<div class="wrapper">
+		{{outlet}}
+	</div>
+</article>
+
+<footer>
+	<div class="wrapper">
+		© 2015 sideload.it
+	</div>
+</footer>

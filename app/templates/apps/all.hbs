@@ -1,9 +1,11 @@
 <h3>Applications</h3>
 
-<ul class="list">
+[{{#link-to "apps.submit"}}~submit{{/link-to}}]{{#if session.currentUser.level}} [{{#link-to "apps.new"}}+new{{/link-to}}]{{/if}}
+
+<ul class="apps-list">
 {{#each model as |item|}}
     <li>
-		<label>{{item.name}}</label> <em>{{item.description}}</em>
+		<label>{{#link-to "app" item}}{{item.name}}{{/link-to}}</label> <em>{{item.description}}</em>
     </li>
 {{/each}}
 </ul>

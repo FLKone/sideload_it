@@ -1,1 +1,37 @@
-{{outlet}}
+<h3>{{model.name}}</h3>
+<p class="description">
+	{{fa-icon "quote-right" pull="left" border=true}}
+	<br/>{{model.description}}<br/>
+	{{fa-icon "quote-left" pull="right" border=true}}
+</p>
+
+<h4>{{fa-icon "paragraph"}} Compatibility</h4>
+<ul class="compatibility">
+	<li class="{{if model.isPhone 'enable' ''}}">{{fa-icon "mobile" title="iPhone"}}</li>
+	<li class="{{if model.isPad 'enable' ''}}">{{fa-icon "tablet" rotate=90 title="iPad"}}</li>
+	<li class="{{if model.isTV 'enable' ''}}">{{fa-icon "television" title="Apple TV"}}</li>
+</ul>
+<!--
+<ul>
+	<li class="compatibility">{{fa-icon "mobile"}}iPhone {{#if model.isPhone}}{{fa-icon "check-circle"}}{{else}}{{fa-icon "times-circle"}}{{/if}}</li>
+	<li class="compatibility">{{fa-icon "tablet"}}iPad {{#if model.isPad}}{{fa-icon "check-circle"}}{{else}}{{fa-icon "times-circle"}}{{/if}}</li>
+	<li class="compatibility">{{fa-icon "television"}}AppleTV {{#if model.isTV}}{{fa-icon "check-circle"}}{{else}}{{fa-icon "times-circle"}}{{/if}}</li>
+</ul>
+-->
+<h4>{{fa-icon "paragraph"}} Screenshots</h4>
+
+<h4>{{fa-icon "paragraph"}} Videos</h4>
+<div class="videoWrapper">
+	<iframe id="ytplayer" type="text/html" width="640" height="390"
+  src="http://www.youtube.com/embed/M7lc1UVf-VE?autoplay=0&origin=http://example.com"
+  frameborder="0"/>
+</div>
+<h4>{{fa-icon "paragraph"}} Guides/Tutorials</h4>
+
+<h4>{{fa-icon "paragraph"}} Comments</h4>
+
+<p class="description">
+	{{fa-icon "quote-right" pull="left" border=true}}
+	<br/>{{model.description}}<br/>
+	{{fa-icon "quote-left" pull="right" border=true}}
+</p>
