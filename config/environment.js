@@ -16,11 +16,18 @@ module.exports = function(environment) {
         // e.g. 'with-controller': true
       }
     },
+    googleFonts: [
+              'Open+Sans:300',
+              'Roboto:300',
+              'Oswald:300,400,700',
+              'Dosis:200, 300, 400, 600, 800'
+            ],
     contentSecurityPolicy: {
         'connect-src': "'self' https://auth.firebase.com wss://*.firebaseio.com",
         'img-src': "'self' *.twimg.com avatars.githubusercontent.com",
         'font-src': "'self' fonts.gstatic.com",
-        'style-src': "'self' fonts.googleapis.com"
+        'style-src': "'self' fonts.googleapis.com",
+        'default-src': "'self' https://www.youtube.com"
     },
     APP: {
       // Here you can pass flags/options to your application instance
