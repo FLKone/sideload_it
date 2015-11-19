@@ -14,8 +14,8 @@ Router.map(function() {
     this.route('apps.submit', { path: '/apps/submit' });
     this.route('apps.new', { path: '/apps/new' });
 
-    this.route('apps.all', { path: '/apps/#all' });
-    this.route('apps.pending', { path: '/apps/#pending' });
+    this.route('apps.all', { path: '/apps/all' });
+    this.route('apps.pending', { path: '/apps/pending' });
 
     this.route('app', { path: '/app/:app_id' });
 
