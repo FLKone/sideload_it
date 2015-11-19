@@ -1,0 +1,37 @@
+body {
+	font-family: 'Open Sans', sans-serif;
+
+}
+
+.avatar {
+	width: 50px;
+	image-rendering: optimizeQuality;
+	image-rendering: -webkit-optimize-contrast;         /* Firefox */
+}
+
+nav button {
+	height: 21px;
+}
+
+h1 {
+	text-transform:uppercase;
+	font-weight: 300;
+	font-family: 'Oswald', sans-serif;
+}
+
+a {
+	color:darkblue;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+button {
+	cursor: pointer;
+}
+
+
+ul label {
+	font-weight: bold;
+}
